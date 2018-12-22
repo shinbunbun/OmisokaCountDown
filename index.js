@@ -15,7 +15,6 @@ const LaunchRequestHandler = {
         const now = new Date(`${year}/${month}/${day}`);
         const omisoka = new Date(`${year}/12/31`);
         const msDiff = omisoka.getTime() - now.getTime();
-        // 求めた差分（ミリ秒）を日付へ変換します（経過ミリ秒÷(1000ミリ秒×60秒×60分×24時間)。端数切り捨て）
         const daysDiff = Math.floor(msDiff / (1000 * 60 * 60 * 24));
         const speechText = `大晦日カウントダウンへようこそ！大晦日まであと${daysDiff}日です！`;
 
